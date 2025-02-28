@@ -1,0 +1,169 @@
+.roadmap {
+  min-width: 100vw;
+  min-height: 100vh;
+  padding: 24px 0;
+  overflow: hidden;
+  // .roadmap__inner
+
+  &__inner {
+    position: relative;
+
+    .title {
+      text-align: center;
+      margin-bottom: 20px;
+
+      @media (max-width: $breakpoint768) {
+        font-size: 40px;
+      }
+    }
+
+  }
+
+  // .roadmap__stages
+
+  &__stages {
+    display: flex;
+    flex-direction: column;
+    row-gap: 60px;
+
+    @media (max-width: $breakpoint768) {
+      row-gap: 20px;
+    }
+  }
+
+  // .roadmap__top
+
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 540px;
+
+    @media (max-width: 1200px) {
+      column-gap: 100px;
+    }
+
+    @media (max-width: $breakpoint768) {
+      flex-direction: column;
+      row-gap: 20px;
+    }
+  }
+
+  // .roadmap__center
+
+  &__center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 76px;
+
+    @media (max-width: 1200px) {
+      column-gap: 30px;
+    }
+
+    @media (max-width: $breakpoint768) {
+      flex-direction: column;
+      row-gap: 20px;
+    }
+  }
+
+  // .roadmap__bottom
+
+  &__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 230px;
+
+    @media (max-width: 1200px) {
+      column-gap: 100px;
+    }
+
+    @media (max-width: $breakpoint768) {
+      flex-direction: column;
+      row-gap: 20px;
+    }
+  }
+
+  // .roadmap__stage
+
+  &__stage {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 550px;
+    min-height: 248px;
+    height: fit-content;
+    padding: 20px;
+    border: 4px solid var(--red);
+    background-color: #262626;
+    border-radius: 14px;
+    overflow: hidden;
+
+    @media (max-width: $breakpoint992) {
+      min-height: 200px;
+    }
+
+  }
+
+  // .roadmap__stage-head
+
+  &__stage-head {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--red);
+    border: 4px solid #262626;
+    border-radius: 8px;
+    width: 240px;
+    height: 84px;
+    padding: 10px;
+    margin-top: -20px;
+    margin-right: -20px;
+
+    text-align: center;
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 42px;
+    letter-spacing: 0.01em;
+    color: var(--white);
+
+    @media (max-width: $breakpoint992) {
+      font-size: 28px;
+      width: 200px;
+      height: 60px;
+    }
+
+  }
+
+  // .roadmap__stage-info
+
+  &__stage-info {
+    margin-top: 20px;
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 35px;
+    line-height: 109%;
+    letter-spacing: 0.02em;
+    text-align: center;
+    color: var(--white);
+
+    @media (max-width: $breakpoint992) {
+      font-size: 24px;
+    }
+
+  }
+
+  // .roadmap__pic
+
+  &__pic {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+  }
+}

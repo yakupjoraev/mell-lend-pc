@@ -1,0 +1,151 @@
+.about {
+  padding: 20px 0;
+  overflow: hidden;
+
+  // .about__inner
+
+  &__inner {}
+
+  // .about__head
+
+  &__head {
+    position: relative;
+    width: fit-content;
+    margin: 0 auto;
+    padding-bottom: 80px;
+    z-index: 2;
+
+    .title {}
+  }
+
+  // .about__head-arrow
+
+  &__head-arrow {
+    position: absolute;
+    left: -160px;
+    top: 20px;
+
+    @media (max-width: $breakpoint768) {
+      left: -100px;
+
+      img {
+        width: 50%;
+      }
+    }
+  }
+
+  // .about__content
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    margin-top: -140px;
+
+    @media (max-width: 1666px) {
+      margin-top: -100px;
+    }
+
+    @media (max-width: $breakpoint1450) {
+      margin-top: -20px;
+    }
+
+    @media (max-width: $breakpoint768) {
+      margin-top: 0;
+    }
+  }
+
+  // .about__columns
+
+  &__columns {
+    display: flex;
+    align-items: center;
+
+    &:nth-child(1) {
+      .about__info-pic {
+        margin-left: -70px;
+      }
+    }
+
+    &:nth-child(2) {
+      .about__info-pic {
+        margin-right: -20px;
+      }
+
+      .about__info-text {
+        text-align: right;
+      }
+
+      @media (max-width: $breakpoint1450) {
+        flex-direction: column-reverse;
+      }
+    }
+
+    @media (max-width: $breakpoint1450) {
+      flex-direction: column;
+      row-gap: 20px;
+    }
+  }
+
+  // .about__column
+
+  &__column {
+    position: relative;
+  }
+
+  // .about__info
+
+  &__info {
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+    padding: 40px 20px;
+    background-color: #282828;
+    border-radius: 20px;
+  }
+
+  // .about__info-pic
+
+  &__info-pic {
+    @media (max-width: $breakpoint768) {
+      display: none;
+    }
+  }
+
+  // .about__info-text
+
+  &__info-text {
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 127%;
+    letter-spacing: 0.02em;
+    color: var(--white);
+
+    @media (max-width: 1666px) {
+      font-size: 24px;
+    }
+  }
+
+  // .about__pic
+
+  &__pic {
+
+    @media (max-width: $breakpoint1450) {
+      img {
+        max-width: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+
+  // .about__info-arrow
+  &__info-arrow {
+    position: absolute;
+    bottom: -180px;
+    left: -100px;
+
+    @media (max-width: $breakpoint1450) {
+      left: 0;
+    }
+  }
+}

@@ -1,0 +1,115 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+  main {
+    flex-grow: 1;
+  }
+}
+
+.title {
+  font-family: var(--second-family);
+  font-weight: 400;
+  font-size: 100px;
+  line-height: 98%;
+  letter-spacing: 0.01em;
+  color: var(--white);
+
+  span {
+    color: var(--red);
+  }
+
+  @media (max-width: $breakpoint1450) {
+    font-size: 80px;
+  }
+
+  @media (max-width: $breakpoint992) {
+    font-size: 60px;
+  }
+
+  @media (max-width: $breakpoint768) {
+    font-size: 44px;
+  }
+
+  @media (max-width: $breakpoint480) {
+    font-size: 36px;
+  }
+}
+
+/* From Uiverse.io by Xtenso */
+.filter-switch {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 58px;
+  width: 188px;
+  padding: 8px;
+  background-color: #212121;
+  border-radius: 4px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.55);
+  overflow: hidden;
+}
+
+.filter-switch input {
+  display: none;
+}
+
+.filter-switch label {
+  flex: 1;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+  border-radius: 30px;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  transition: all 0.5s;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.filter-switch .background {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 48%;
+  height: 42px;
+  background-color: #404040;
+  top: 8px;
+  left: 4px;
+  border-radius: 4px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.55);
+  transition: left 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+#option2:checked~.background {
+  left: 50%;
+}
+
+#option1:checked+label[for="option1"] {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 125%;
+  color: #fff;
+}
+
+#option2:checked+label[for="option2"] {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 125%;
+  color: #fff;
+}
+
+#option1:not(:checked)+label[for="option1"],
+#option2:not(:checked)+label[for="option2"] {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 125%;
+  color: #404040;
+}
