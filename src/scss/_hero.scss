@@ -1,4 +1,6 @@
 .hero {
+  position: relative;
+  min-height: calc(100vh - 140px);
   overflow: hidden;
   padding: 40px 0 96px;
 
@@ -11,6 +13,11 @@
 
   &__inner {
     position: relative;
+    padding-right: 30vw;
+
+    @media (max-width: $breakpoint992) {
+      padding-right: 0;
+    }
   }
 
   // .hero__info
@@ -189,7 +196,31 @@
   &__bg {
     position: absolute;
     left: 50%;
-    top: -140px;
+    top: -100px;
     z-index: -1;
+
+    @media (max-width: 1600px) {
+      top: auto;
+      bottom: 0;
+
+      img {
+        width: 800px;
+      }
+    }
+
+    @media (max-width: $breakpoint992) {
+      display: none;
+    }
+  }
+
+  // .hero__mell 
+  &__mell {
+    position: absolute;
+    right: 200px;
+    bottom: 0;
+
+    @media (max-width: 1710px) {
+      right: 0;
+    }
   }
 }

@@ -137,6 +137,7 @@ body.locked {
       -ms-flex-direction: column;
           flex-direction: column;
   min-height: 100vh;
+  overflow: hidden;
 }
 
 .wrapper main {
@@ -374,12 +375,15 @@ body.locked {
 }
 
 .hero {
+  position: relative;
+  min-height: calc(100vh - 140px);
   overflow: hidden;
   padding: 40px 0 96px;
 }
 
 .hero__inner {
   position: relative;
+  padding-right: 30vw;
 }
 
 .hero__info {
@@ -560,8 +564,14 @@ body.locked {
 .hero__bg {
   position: absolute;
   left: 50%;
-  top: -140px;
+  top: -100px;
   z-index: -1;
+}
+
+.hero__mell {
+  position: absolute;
+  right: 200px;
+  bottom: 0;
 }
 
 .how-to-buy {
@@ -783,7 +793,7 @@ body.locked {
 
 .roadmap__inner .title {
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 
 .roadmap__stages {
@@ -794,7 +804,7 @@ body.locked {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  row-gap: 60px;
+  row-gap: 40px;
 }
 
 .roadmap__top {
@@ -807,9 +817,9 @@ body.locked {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-column-gap: 540px;
-     -moz-column-gap: 540px;
-          column-gap: 540px;
+  -webkit-column-gap: 240px;
+     -moz-column-gap: 240px;
+          column-gap: 240px;
 }
 
 .roadmap__center {
@@ -822,9 +832,9 @@ body.locked {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-column-gap: 76px;
-     -moz-column-gap: 76px;
-          column-gap: 76px;
+  -webkit-column-gap: 60px;
+     -moz-column-gap: 60px;
+          column-gap: 60px;
 }
 
 .roadmap__bottom {
@@ -837,9 +847,9 @@ body.locked {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-column-gap: 230px;
-     -moz-column-gap: 230px;
-          column-gap: 230px;
+  -webkit-column-gap: 160px;
+     -moz-column-gap: 160px;
+          column-gap: 160px;
 }
 
 .roadmap__stage {
@@ -855,12 +865,12 @@ body.locked {
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
-  max-width: 550px;
-  min-height: 248px;
+  max-width: 480px;
+  min-height: 180px;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  padding: 20px;
+  padding: 12px;
   border: 4px solid var(--red);
   background-color: #262626;
   border-radius: 14px;
@@ -881,24 +891,24 @@ body.locked {
   background-color: var(--red);
   border: 4px solid #262626;
   border-radius: 8px;
-  width: 240px;
-  height: 84px;
-  padding: 10px;
+  width: 180px;
+  height: 74px;
+  padding: 6px;
   margin-top: -20px;
   margin-right: -20px;
   text-align: center;
   font-family: var(--second-family);
   font-weight: 400;
-  font-size: 42px;
+  font-size: 28px;
   letter-spacing: 0.01em;
   color: var(--white);
 }
 
 .roadmap__stage-info {
-  margin-top: 20px;
+  margin-top: 12px;
   font-family: var(--font-family);
   font-weight: 700;
-  font-size: 35px;
+  font-size: 24px;
   line-height: 109%;
   letter-spacing: 0.02em;
   text-align: center;
@@ -1002,6 +1012,12 @@ body.locked {
   left: -100px;
 }
 
+@media (max-width: 1710px) {
+  .hero__mell {
+    right: 0;
+  }
+}
+
 @media (max-width: 1666px) {
   .about__content {
     margin-top: -100px;
@@ -1013,6 +1029,15 @@ body.locked {
 }
 
 @media (max-width: 1600px) {
+  .hero__bg {
+    top: auto;
+    bottom: 0;
+  }
+
+  .hero__bg img {
+    width: 800px;
+  }
+
   .how-to-buy__pic img {
     width: 800px;
   }
@@ -1304,6 +1329,10 @@ body.locked {
     padding: 20px 0 60px;
   }
 
+  .hero__inner {
+    padding-right: 0;
+  }
+
   .hero__info {
     row-gap: 40px;
   }
@@ -1316,18 +1345,22 @@ body.locked {
     padding: 30px 40px;
   }
 
+  .hero__bg {
+    display: none;
+  }
+
   .roadmap__stage {
-    min-height: 200px;
+    min-height: 160px;
   }
 
   .roadmap__stage-head {
-    font-size: 28px;
-    width: 200px;
+    font-size: 24px;
+    width: 160px;
     height: 60px;
   }
 
   .roadmap__stage-info {
-    font-size: 24px;
+    font-size: 22px;
   }
 }
 
