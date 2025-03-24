@@ -15,6 +15,10 @@
     position: relative;
     padding-right: 30vw;
 
+    .title {
+      font-size: 64px;
+    }
+
     @media (max-width: $breakpoint992) {
       padding-right: 0;
     }
@@ -25,8 +29,9 @@
   &__info {
     display: flex;
     flex-direction: column;
-    row-gap: 100px;
-    max-width: 980px;
+    row-gap: 40px;
+    max-width: 680px;
+    margin: 0 auto;
 
     @media (max-width: $breakpoint992) {
       row-gap: 40px;
@@ -36,10 +41,10 @@
   // .hero__text
 
   &__text {
-    max-width: 860px;
+    max-width: 660px;
     font-family: var(--font-family);
     font-weight: 700;
-    font-size: 28px;
+    font-size: 24px;
     line-height: 143%;
     letter-spacing: 0.01em;
     color: var(--white);
@@ -60,7 +65,7 @@
     flex-direction: column;
     row-gap: 20px;
     align-items: center;
-    padding: 30px 80px 50px;
+    padding: 20px 40px 30px;
     background-color: #282828;
     border-radius: 24px;
 
@@ -76,7 +81,7 @@
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    column-gap: 40px;
+    column-gap: 20px;
     row-gap: 20px;
     margin-bottom: 20px;
   }
@@ -196,7 +201,7 @@
   &__bg {
     position: absolute;
     left: 50%;
-    top: -100px;
+    top: -80px;
     z-index: -1;
 
     @media (max-width: 1600px) {
@@ -213,14 +218,4 @@
     }
   }
 
-  // .hero__mell 
-  &__mell {
-    position: absolute;
-    right: 200px;
-    bottom: 0;
-
-    @media (max-width: 1710px) {
-      right: 0;
-    }
-  }
 }
