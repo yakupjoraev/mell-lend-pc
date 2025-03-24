@@ -1064,13 +1064,8 @@ body.locked {
 }
 
 @media (max-width: 1600px) {
-  .hero__bg {
-    top: auto;
-    bottom: 0;
-  }
-
   .hero__bg img {
-    width: 800px;
+    width: 700px;
   }
 
   .how-to-buy__pic img {
